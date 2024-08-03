@@ -1,0 +1,40 @@
+{
+  "name": "@hxj0x/thin-jsx",
+  "version": "0.0.1",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/umd/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./jsx-runtime": {
+      "require": "./dist/umd/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/jsx-runtime.d.ts"
+    },
+    "./jsx-dev-runtime": {
+      "require": "./dist/umd/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/jsx-runtime.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "jsx-runtime.d.ts"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
+    "typings": "tsc -v && tsc -b -v",
+    "prepack": "rimraf dist && pnpm typings && pnpm build"
+  },
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.20.0",
+    "rollup-plugin-esbuild": "^6.1.1"
+  }
+}

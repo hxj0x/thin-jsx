@@ -1,0 +1,51 @@
+// 这个是不会生效的，只是保存下
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "alt+left",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "welcome.goBack",
+    "when": "inWelcome && activeEditor == 'gettingStartedPage'"
+  },
+  {
+    "key": "escape",
+    "command": "-welcome.goBack",
+    "when": "inWelcome && activeEditor == 'gettingStartedPage'"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "alt+right",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  { "key": "ctrl+alt+.", "command": "turboConsoleLog.displayLogMessage" },
+  { "key": "ctrl+alt+/", "command": "turboConsoleLog.commentAllLogMessages" }
+]

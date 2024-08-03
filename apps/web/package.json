@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.3",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hxj0x/thin-jsx": "workspace:^"
+  },
+  "devDependencies": {
+    "vite": "^5.3.5"
+  }
+}
