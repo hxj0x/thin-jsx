@@ -10,6 +10,10 @@ export default function h(tag: any, props: Record<string, any>) {
   if (typeof tag === "function") {
     if (tag.IS_JSX_CLASS) {
       const clazz = new tag(props);
+      if (props && props.ref) {
+        console.log(props.ref);
+        props.ref.current = clazz;
+      }
       const result = clazz.render();
       clazz.onDomCreated();
       return result;
@@ -21,7 +25,7 @@ export default function h(tag: any, props: Record<string, any>) {
   const element = document.createElement(tag) as Element;
   if (props) {
     if (props.ref) {
-      props.ref.value = element;
+      props.ref.current = element;
     }
     Object.entries(props).forEach(([key, value]) => {
       if (key === "children" || key === "ref") {

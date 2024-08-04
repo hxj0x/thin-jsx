@@ -8,8 +8,12 @@ export type JSXNode =
   | null
   | undefined;
 
-interface Ref<K extends keyof HTMLElementTagNameMap> {
-  value: HTMLElementTagNameMap[K];
+// export interface Ref<K extends keyof HTMLElementTagNameMap> {
+//   current: HTMLElementTagNameMap[K] | any;
+// }
+
+export interface Ref<T> {
+  current: T;
 }
 
 export interface Props<K extends keyof HTMLElementTagNameMap> {

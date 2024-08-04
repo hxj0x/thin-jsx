@@ -1,4 +1,4 @@
-export { ClassComponent, Fragment } from "./core";
+export { ClassComponent, Fragment, useRef } from "./core";
 export {
   default as createElement,
   default as jsx,

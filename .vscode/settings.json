@@ -71,7 +71,9 @@
     "cSpell.userWords"
   ],
   "tailwindCSS.classAttributes": ["class", "className", "classList", "ngClass"],
-  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
   "vim.foldfix": true,
   "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
   "vim.highlightedyank.enable": true,
@@ -93,5 +95,6 @@
   "scm.experimental.showHistoryGraph": true,
   "javascript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.importModuleSpecifier": "shortest",
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "prettier.printWidth": 120
 }
