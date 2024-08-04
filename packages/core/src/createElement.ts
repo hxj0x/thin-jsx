@@ -8,10 +8,10 @@ export default function h(tag: any, props: Record<string, any>) {
   const children = props.children;
 
   if (typeof tag === "function") {
-    if (tag.isJsxClass) {
+    if (tag.IS_JSX_CLASS) {
       const clazz = new tag(props);
       const result = clazz.render();
-      clazz.onMount();
+      clazz.onDomCreated();
       return result;
     }
     const result = tag(props);
