@@ -13,7 +13,7 @@ export class IconExample extends ClassComponent {
     return (
       <div>
         <>
-          <img src={reloadSvg} alt="加载" />
+          <img src={reloadSvg} alt="加载" className="animate-spin" />
           <div ref={this.dom}>hello</div>
         </>
       </div>
