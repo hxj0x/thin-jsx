@@ -2,7 +2,7 @@ import { Props } from "./type";
 
 export function h<K extends keyof HTMLElementTagNameMap>(
   tag: K,
-  props: Props<K>
+  props: Props<K>,
 ): HTMLElementTagNameMap[K];
 export default function h(tag: any, props: Record<string, any>) {
   const children = props.children;
@@ -36,7 +36,7 @@ export default function h(tag: any, props: Record<string, any>) {
       if (key.startsWith("on") && typeof value === "function") {
         element.addEventListener(
           key.substring(2).toLowerCase(),
-          value as EventListenerOrEventListenerObject
+          value as EventListenerOrEventListenerObject,
         );
         return;
       }
@@ -58,7 +58,9 @@ export default function h(tag: any, props: Record<string, any>) {
 
   if (children) {
     if (Array.isArray(children)) {
-      children.forEach((child) => element.append(child));
+      children.forEach((child) => {
+        if (child) element.append(child);
+      });
     } else {
       element.append(children);
     }

@@ -3,7 +3,7 @@ import { JSX } from "./jsx-runtime";
 export abstract class ClassComponent {
   static readonly IS_JSX_CLASS = true;
 
-  protected abstract render(): JSX.Element;
+  public abstract render(): JSX.Element;
 
   protected onDomCreated(): void {}
 }

@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hxj0x/thin-jsx": "workspace:^"
+    "@hxj0x/thin-jsx": "workspace:^",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

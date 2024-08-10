@@ -1,7 +1,10 @@
-import { ButtonExample } from "./ButtonExample";
+import "normalize.css";
+import { IconExample } from "./IconExample";
 import "./index.css";
 
 const app = document.getElementById("app")!;
+
+var svg: SVGSVGElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 // class App extends ClassComponent {
 //   private readonly dom = useRef<InstanceType<typeof HelloClass>>();
@@ -18,4 +21,6 @@ const app = document.getElementById("app")!;
 //     );
 //   }
 // }
-app.append((<ButtonExample />) as Element);
+const a = (<IconExample />) as Element;
+console.log(a);
+app.append(a);
