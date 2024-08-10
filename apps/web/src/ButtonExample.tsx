@@ -2,7 +2,7 @@ import { ClassComponent } from "@hxj0x/thin-jsx";
 import { JSX } from "@hxj0x/thin-jsx/jsx-runtime";
 
 export class ButtonExample extends ClassComponent {
-  protected override render(): JSX.Element {
+  override render(): JSX.Element {
     return (
       <div>
         <button type="button" className="inline-flex">
@@ -15,7 +15,7 @@ export class ButtonExample extends ClassComponent {
 }
 
 class ButtonExample2 extends ClassComponent {
-  protected override render(): JSX.Element {
+  override render(): JSX.Element {
     return (
       <div>
         <button type="button" className="inline-flex">
