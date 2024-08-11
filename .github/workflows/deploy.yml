@@ -46,7 +46,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: pnpm -F .\apps\web\ install
+        run: pnpm i
       - name: Build web app
         run: pnpm -F .\apps\web\ build
       - name: Upload artifact
