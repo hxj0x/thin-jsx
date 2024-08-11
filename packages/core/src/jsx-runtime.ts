@@ -580,7 +580,7 @@ export namespace JSX {
   interface BlockquoteHTMLAttributes<T> extends HTMLAttributes<T> {
     cite?: string;
   }
-  interface ButtonHTMLAttributes<T> extends HTMLAttributes<T> {
+  export interface ButtonHTMLAttributes<T> extends HTMLAttributes<T> {
     autofocus?: boolean;
     disabled?: boolean;
     form?: string;

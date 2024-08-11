@@ -1,13 +1,13 @@
-# script
+# Thin JSX
 
-```shell
-pnpm -r --filter=./packages/core prepack
-pnpm -r --filter=./apps/web dev
-pnpm -r publish --access public
+## thin-jsx
 
-pnpm add rollup rollup-plugin-esbuild esbuild --filter packages/core
-#  根工作区安装依赖
-pnpm add --workspace-root
-# 指定某个模块安装依赖
-pnpm -F .\packages\core\  add rimraf rollup rollup-plugin-esbuild esbuild
-``` 
+> 提供简单的JSX语法支持
+
+## thin-jsx-ui
+
+> 提供基于thin-jsx的UI组件库，也可以集成到react、vue等项目中
+
+目前UI组件库的开发进度
+
+* [] button

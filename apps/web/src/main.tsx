@@ -16,8 +16,8 @@ window.addEventListener("popstate", (e) => {
 
 function initRoute() {
   if (location.pathname === baseUrl) {
-    history.replaceState(baseUrl + "/icon", "", baseUrl + "/icon");
-    doRoute(baseUrl + "/icon");
+    history.replaceState(baseUrl + "/buttons", "", baseUrl + "/buttons");
+    doRoute(baseUrl + "/buttons");
   } else {
     doRoute(location.pathname);
   }
@@ -41,37 +41,40 @@ class App extends ClassComponent {
 
   override render() {
     return (
-      <div>
-        <div ref={dom}></div>
-        <button
-          type="button"
-          onClick={() => {
-            history.pushState(baseUrl + "/icons", "", baseUrl + "/icons");
-            doRoute(baseUrl + "/icons");
-          }}
-        >
-          icons
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            history.pushState(baseUrl + "/buttons", "", baseUrl + "/buttons");
-            doRoute(baseUrl + "/buttons");
-          }}
-        >
-          buttons
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            history.pushState(baseUrl + "/404", "", baseUrl + "/404");
-            doRoute(baseUrl + "/404");
-          }}
-        >
-          404
-        </button>
+      <div className="flex h-full w-full">
+        <nav className="flex h-full flex-col gap-2 border-0 border-r border-solid border-gray-200 p-4">
+          <button
+            variant="button"
+            onClick={() => {
+              history.pushState(baseUrl + "/buttons", "", baseUrl + "/buttons");
+              doRoute(baseUrl + "/buttons");
+            }}
+          >
+            buttons
+          </button>
+          <button
+            variant="button"
+            onClick={() => {
+              history.pushState(baseUrl + "/icons", "", baseUrl + "/icons");
+              doRoute(baseUrl + "/icons");
+            }}
+          >
+            icons
+          </button>
+
+          <button
+            variant="button"
+            onClick={() => {
+              history.pushState(baseUrl + "/404", "", baseUrl + "/404");
+              doRoute(baseUrl + "/404");
+            }}
+          >
+            404
+          </button>
+        </nav>
+        <div ref={dom} className="flex flex-1 items-center justify-center"></div>
       </div>
     );
   }
 }
-document.getElementById("app")!.append((<App />) as Element);
+document.getElementById("root")!.append((<App />) as Element);
