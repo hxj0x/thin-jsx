@@ -44,7 +44,7 @@ class App extends ClassComponent {
       <div className="flex h-full w-full">
         <nav className="flex h-full flex-col gap-2 border-0 border-r border-solid border-gray-200 p-4">
           <button
-            variant="button"
+            type="button"
             onClick={() => {
               history.pushState(baseUrl + "/buttons", "", baseUrl + "/buttons");
               doRoute(baseUrl + "/buttons");
@@ -53,7 +53,7 @@ class App extends ClassComponent {
             buttons
           </button>
           <button
-            variant="button"
+            type="button"
             onClick={() => {
               history.pushState(baseUrl + "/icons", "", baseUrl + "/icons");
               doRoute(baseUrl + "/icons");
@@ -63,7 +63,7 @@ class App extends ClassComponent {
           </button>
 
           <button
-            variant="button"
+            type="button"
             onClick={() => {
               history.pushState(baseUrl + "/404", "", baseUrl + "/404");
               doRoute(baseUrl + "/404");
