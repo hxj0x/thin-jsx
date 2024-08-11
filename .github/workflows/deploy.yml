@@ -48,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i
       - name: Build web app
-        run: pnpm -F .\apps\web\ build
+        run: pnpm --filter .\apps\web\ build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
