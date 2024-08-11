@@ -47,6 +47,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: pnpm i
+      - name: build core lib
+        run: pnpm -r --filter=./packages/core prepack
       - name: Build web app
         run: pnpm --filter ./apps/web build
       - name: Upload artifact
