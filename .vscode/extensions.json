@@ -8,6 +8,7 @@
     "dbaeumer.vscode-eslint",
     "pkief.material-icon-theme",
     "ipatalas.vscode-postfix-ts",
-    "chakrounanas.turbo-console-log"
+    "chakrounanas.turbo-console-log",
+    "github.vscode-github-actions"
   ]
 }
