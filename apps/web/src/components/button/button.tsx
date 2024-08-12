@@ -17,7 +17,6 @@ export class Button extends ClassComponent {
 
   constructor(private props: ButtonProps) {
     super();
-    console.log(props);
   }
 
   override onDomCreated(): void {
