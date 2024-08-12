@@ -2,9 +2,9 @@ import { ClassComponent, Ref, useRef } from "@hxj0x/thin-jsx";
 import "normalize.css";
 import { Link } from "./components/a/link";
 import { ButtonExample } from "./examples/ButtonExample";
+import { IconExample } from "./examples/IconExample";
 import { LinkExample } from "./examples/LinkExample";
 import { NotFoundExample } from "./examples/NotFoundExample";
-import { IconExample } from "./IconExample";
 import "./index.css";
 import { Router } from "./router";
 
