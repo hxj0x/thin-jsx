@@ -547,7 +547,7 @@ export namespace JSX {
       | "search";
   }
 
-  interface AnchorHTMLAttributes<T> extends HTMLAttributes<T> {
+  export interface AnchorHTMLAttributes<T> extends HTMLAttributes<T> {
     download?: any;
     href?: string;
     hreflang?: string;

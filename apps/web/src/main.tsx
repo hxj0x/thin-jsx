@@ -1,6 +1,7 @@
 import { ClassComponent, useRef } from "@hxj0x/thin-jsx";
 import "normalize.css";
-import { ButtonExample } from "./ButtonExample";
+import { Link } from "./components/a/link";
+import { ButtonExample } from "./examples/ButtonExample";
 import { IconExample } from "./IconExample";
 import "./index.css";
 
@@ -29,7 +30,14 @@ function doRoute(toPath) {
   if (Comp) {
     dom.current.replaceChildren((<Comp />) as Element);
   } else {
-    const a = <h1>404 NOT Found</h1>;
+    const a = (
+      <div>
+        <h1>请选择左边侧边栏进行导航</h1>
+        <small>
+          （由于github page限制，只能直接访问<Link>https://hxj0x.github.io/thin-jsx/</Link>）
+        </small>
+      </div>
+    );
     dom.current.replaceChildren(a as Element);
   }
 }
@@ -48,6 +56,15 @@ class App extends ClassComponent {
             onClick={() => {
               history.pushState(baseUrl + "/buttons", "", baseUrl + "/buttons");
               doRoute(baseUrl + "/buttons");
+            }}
+          >
+            buttons
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              history.pushState(baseUrl + "/links", "", baseUrl + "/links");
+              doRoute(baseUrl + "/links");
             }}
           >
             buttons

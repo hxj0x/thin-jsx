@@ -1,6 +1,7 @@
 import { ClassComponent, useRef } from "@hxj0x/thin-jsx";
 import { JSX } from "@hxj0x/thin-jsx/jsx-runtime";
-import { Button } from "./components/button";
+import { Button } from "../components/button";
+import { LinkExample } from "./LinkExample";
 
 export class ButtonExample extends ClassComponent {
   override render(): JSX.Element {
@@ -12,6 +13,7 @@ export class ButtonExample extends ClassComponent {
           <Button>默认按钮</Button>
           <Button variant="text">文本按钮</Button>
           <Button variant="link">超链接按钮</Button>
+          <LinkExample />
         </div>
         <hr />
         <div className="flex w-full shrink-0 justify-center gap-2">
@@ -53,7 +55,7 @@ export class ButtonExample extends ClassComponent {
         </div>
         <hr />
         <div className="flex w-full shrink-0 justify-center gap-2">
-          <Button variant="default" loading disabled>
+          <Button variant="primary" loading disabled>
             加载中
           </Button>
         </div>
