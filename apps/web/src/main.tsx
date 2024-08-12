@@ -1,5 +1,6 @@
 import { ClassComponent, Ref, useRef } from "@hxj0x/thin-jsx";
 import "normalize.css";
+import { Link } from "./components/a/link";
 import { ButtonExample } from "./examples/ButtonExample";
 import { LinkExample } from "./examples/LinkExample";
 import { NotFoundExample } from "./examples/NotFoundExample";
@@ -30,14 +31,13 @@ class App extends ClassComponent {
         <nav className="flex h-full flex-col gap-2 border-0 border-r border-solid border-gray-200 p-4">
           {routerTable.map(({ path, title }) => {
             return (
-              <button
-                type="button"
+              <Link
                 onClick={() => {
                   router.doRoute(path);
                 }}
               >
                 {title}
-              </button>
+              </Link>
             );
           })}
         </nav>
