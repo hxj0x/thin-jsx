@@ -1,6 +1,6 @@
 import { ClassComponent, Ref, useRef } from "@hxj0x/thin-jsx";
 import "normalize.css";
-import { Link } from "./components/a/link";
+import { Link } from "./components/link/link";
 import { ButtonExample } from "./examples/ButtonExample";
 import { IconExample } from "./examples/IconExample";
 import { LinkExample } from "./examples/LinkExample";

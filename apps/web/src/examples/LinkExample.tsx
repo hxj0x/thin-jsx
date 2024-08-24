@@ -1,6 +1,6 @@
 import { ClassComponent } from "@hxj0x/thin-jsx";
 import { JSX } from "@hxj0x/thin-jsx/jsx-runtime";
-import { Link } from "../components/a/link";
+import { Link } from "../components/link/link";
 
 export class LinkExample extends ClassComponent {
   override render(): JSX.Element {
