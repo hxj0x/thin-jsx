@@ -5,7 +5,8 @@ export abstract class ClassComponent {
 
   public abstract render(): JSX.Element;
 
-  protected onDomCreated(): void {}
+  public onDomCreated(): void {}
+  public onDomRemoved(): void {}
 }
 
 type useRef<T> = () => { current: T };

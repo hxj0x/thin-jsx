@@ -1,4 +1,5 @@
 import { Ref } from "./type";
+export * from "./index";
 
 // 参考：https://github.com/ryansolid/dom-expressions/blob/8d2d82fd96a08c82b933fcf87ef521c4b54cf490/packages/dom-expressions/src/jsx.d.ts
 export namespace JSX {

@@ -11,7 +11,6 @@ export default function h(tag: any, props: Record<string, any>) {
     if (tag.IS_JSX_CLASS) {
       const clazz = new tag(props);
       if (props && props.ref) {
-        console.log(props.ref);
         props.ref.current = clazz;
       }
       const result = clazz.render();

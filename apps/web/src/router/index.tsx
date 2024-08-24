@@ -4,7 +4,7 @@ export class Router {
   private readonly routerTable = new Map<string, typeof ClassComponent>();
   private readonly dom: Ref<Element>;
 
-  constructor(dom: Ref<Element>, routers: Array<{ path: string; component: typeof ClassComponent }>) {
+  constructor(dom: Ref<Element>, routers: Array<{ path: string; title: string; component: typeof ClassComponent }>) {
     this.dom = dom;
     routers.forEach((router) => {
       this.routerTable.set(router.path, router.component);

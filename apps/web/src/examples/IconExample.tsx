@@ -12,7 +12,7 @@ export class IconExample extends ClassComponent {
 
   private readonly dom = useRef<HTMLDivElement>();
 
-  protected onDomCreated(): void {}
+  override onDomCreated(): void {}
 
   override render(): JSX.Element {
     return (
