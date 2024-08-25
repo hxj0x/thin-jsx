@@ -10,11 +10,13 @@ const config = defineConfig([
         dir: "dist/umd",
         name: "index",
         format: "umd",
+        sourcemap: true,
       },
       {
         dir: "dist/esm",
         name: "index",
         format: "esm",
+        sourcemap: true,
       },
     ],
   },
