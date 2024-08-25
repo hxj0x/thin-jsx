@@ -119,11 +119,17 @@ export class Button extends ClassComponent {
     }
   }
 
+  public setLoading(loading: boolean) {
+    this.btnDom.current.setAttribute("data-loading", loading ? "true" : "false");
+    this.loadingDom.current.setAttribute("data-loading", loading ? "true" : "false");
+  }
+
   override render(): JSX.Element {
     return (
       <button
-        ref={this.btnDom}
         {...this.props}
+        // after spared props, fix ref overwrite by this.props
+        ref={this.btnDom}
         type="button"
         data-loading="false"
         data-pressed="false"

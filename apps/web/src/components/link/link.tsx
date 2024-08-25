@@ -44,8 +44,8 @@ export class Link extends ClassComponent {
   override render() {
     return (
       <a
-        ref={this.aDom}
         {...this.props}
+        ref={this.aDom}
         data-loading="false"
         data-pressed="false"
         className="inline-flex h-8 shrink-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md text-center text-sm transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-65"
