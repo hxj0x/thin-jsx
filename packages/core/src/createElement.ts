@@ -49,8 +49,9 @@ export default function h(tag: any, props: Record<string, any>) {
         element.setAttribute("for", value);
         return;
       }
-
-      element.setAttribute(key, value.toString());
+      if (typeof value == "string") {
+        element.setAttribute(key, value.toString());
+      }
       return;
     });
   }

@@ -14,3 +14,5 @@
 * [] icon
 * [] link
 * [] source mapping
+* [] key props support for react copy
+* [] add onChange onInput more support ?
