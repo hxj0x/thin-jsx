@@ -49,8 +49,8 @@ importers:
         specifier: ^5.4.0
         version: 5.4.0(@types/node@22.5.0)
       vite-plugin-dts:
-        specifier: ^4.0.3
-        version: 4.0.3(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0))
+        specifier: ^4.1.0
+        version: 4.1.0(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0))
 
   packages/core:
     dependencies:
@@ -1716,8 +1716,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vite-plugin-dts@4.0.3:
-    resolution: {integrity: sha512-+xnTsaONwU2kV6zhRjtbRJSGN41uFR/whqmcb4k4fftLFDJElxthp0PP5Fq8gMeM9ytWMt1yk5gGgekLREWYQQ==}
+  vite-plugin-dts@4.1.0:
+    resolution: {integrity: sha512-sRlmt9k2q8MrX4F2058N3KmB6WyJ3Ao6QaExOv1X99F3j0GhPziEz1zscWQ1q2r1PeFc96L7GIUu8Pl2DPr2Hg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -3305,7 +3305,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-dts@4.0.3(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0)):
+  vite-plugin-dts@4.1.0(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0)):
     dependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@22.5.0)
       '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
