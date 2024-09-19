@@ -50,7 +50,7 @@ importers:
         version: 5.4.0(@types/node@22.5.0)
       vite-plugin-dts:
         specifier: ^4.0.3
-        version: 4.0.3(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0))
+        version: 4.0.3(@types/node@22.5.0)(rollup@4.22.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0))
 
   packages/core:
     dependencies:
@@ -61,11 +61,11 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       rollup:
-        specifier: ^4.20.0
-        version: 4.20.0
+        specifier: ^4.22.0
+        version: 4.22.0
       rollup-plugin-esbuild:
         specifier: ^6.1.1
-        version: 6.1.1(esbuild@0.23.0)(rollup@4.20.0)
+        version: 6.1.1(esbuild@0.23.0)(rollup@4.22.0)
 
 packages:
 
@@ -687,6 +687,11 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
+  '@rollup/rollup-darwin-arm64@4.22.0':
+    resolution: {integrity: sha512-ZWgARzhSKE+gVUX7QWaECoRQsPwaD8ZR0Oxb3aUpzdErTvlEadfQpORPXkKSdKbFci9v8MJfkTtoEHnnW9Ulng==}
+    cpu: [arm64]
+    os: [darwin]
+
   '@rollup/rollup-darwin-x64@4.20.0':
     resolution: {integrity: sha512-xbrMDdlev53vNXexEa6l0LffojxhqDTBeL+VUxuuIXys4x6xyvbKq5XqTXBCEUA8ty8iEJblHvFaWRJTk/icAQ==}
     cpu: [x64]
@@ -740,8 +745,20 @@ packages:
     os: [linux]
     libc: [glibc]
 
+  '@rollup/rollup-linux-x64-gnu@4.22.0':
+    resolution: {integrity: sha512-tsSWy3YQzmpjDKnQ1Vcpy3p9Z+kMFbSIesCdMNgLizDWFhrLZIoN21JSq01g+MZMDFF+Y1+4zxgrlqPjid5ohg==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
   '@rollup/rollup-linux-x64-musl@4.20.0':
     resolution: {integrity: sha512-hM3nhW40kBNYUkZb/r9k2FKK+/MnKglX7UYd4ZUy5DJs8/sMsIbqWK2piZtVGE3kcXVNj3B2IrUYROJMMCikNg==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-linux-x64-musl@4.22.0':
+    resolution: {integrity: sha512-anr1Y11uPOQrpuU8XOikY5lH4Qu94oS6j0xrulHk3NkLDq19MlX8Ng/pVipjxBJ9a2l3+F39REZYyWQFkZ4/fw==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
@@ -758,6 +775,11 @@ packages:
 
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     resolution: {integrity: sha512-aJ1EJSuTdGnM6qbVC4B5DSmozPTqIag9fSzXRNNo+humQLG89XpPgdt16Ia56ORD7s+H8Pmyx44uczDQ0yDzpg==}
+    cpu: [x64]
+    os: [win32]
+
+  '@rollup/rollup-win32-x64-msvc@4.22.0':
+    resolution: {integrity: sha512-YdicNOSJONVx/vuPkgPTyRoAPx3GbknBZRCOUkK84FJ/YTfs/F0vl/YsMscrB6Y177d+yDRcj+JWMPMCgshwrA==}
     cpu: [x64]
     os: [win32]
 
@@ -1588,6 +1610,11 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  rollup@4.22.0:
+    resolution: {integrity: sha512-W21MUIFPZ4+O2Je/EU+GP3iz7PH4pVPUXSbEZdatQnxo29+3rsUjgrJmzuAZU24z7yRAnFN6ukxeAhZh/c7hzg==}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
@@ -2260,13 +2287,13 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@rollup/pluginutils@5.1.0(rollup@4.20.0)':
+  '@rollup/pluginutils@5.1.0(rollup@4.22.0)':
     dependencies:
       '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
-      rollup: 4.20.0
+      rollup: 4.22.0
 
   '@rollup/rollup-android-arm-eabi@4.20.0':
     optional: true
@@ -2275,6 +2302,9 @@ snapshots:
     optional: true
 
   '@rollup/rollup-darwin-arm64@4.20.0':
+    optional: true
+
+  '@rollup/rollup-darwin-arm64@4.22.0':
     optional: true
 
   '@rollup/rollup-darwin-x64@4.20.0':
@@ -2304,7 +2334,13 @@ snapshots:
   '@rollup/rollup-linux-x64-gnu@4.20.0':
     optional: true
 
+  '@rollup/rollup-linux-x64-gnu@4.22.0':
+    optional: true
+
   '@rollup/rollup-linux-x64-musl@4.20.0':
+    optional: true
+
+  '@rollup/rollup-linux-x64-musl@4.22.0':
     optional: true
 
   '@rollup/rollup-win32-arm64-msvc@4.20.0':
@@ -2314,6 +2350,9 @@ snapshots:
     optional: true
 
   '@rollup/rollup-win32-x64-msvc@4.20.0':
+    optional: true
+
+  '@rollup/rollup-win32-x64-msvc@4.22.0':
     optional: true
 
   '@rushstack/node-core-library@5.5.1(@types/node@22.5.0)':
@@ -3143,14 +3182,14 @@ snapshots:
       glob: 11.0.0
       package-json-from-dist: 1.0.0
 
-  rollup-plugin-esbuild@6.1.1(esbuild@0.23.0)(rollup@4.20.0):
+  rollup-plugin-esbuild@6.1.1(esbuild@0.23.0)(rollup@4.22.0):
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.0)
       debug: 4.3.6
       es-module-lexer: 1.5.4
       esbuild: 0.23.0
       get-tsconfig: 4.7.6
-      rollup: 4.20.0
+      rollup: 4.22.0
     transitivePeerDependencies:
       - supports-color
 
@@ -3174,6 +3213,16 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.20.0
       '@rollup/rollup-win32-ia32-msvc': 4.20.0
       '@rollup/rollup-win32-x64-msvc': 4.20.0
+      fsevents: 2.3.3
+
+  rollup@4.22.0:
+    dependencies:
+      '@types/estree': 1.0.5
+    optionalDependencies:
+      '@rollup/rollup-darwin-arm64': 4.22.0
+      '@rollup/rollup-linux-x64-gnu': 4.22.0
+      '@rollup/rollup-linux-x64-musl': 4.22.0
+      '@rollup/rollup-win32-x64-msvc': 4.22.0
       fsevents: 2.3.3
 
   run-parallel@1.2.0:
@@ -3305,10 +3354,10 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-dts@4.0.3(@types/node@22.5.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0)):
+  vite-plugin-dts@4.0.3(@types/node@22.5.0)(rollup@4.22.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.5.0)):
     dependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@22.5.0)
-      '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.0)
       '@volar/typescript': 2.4.0
       '@vue/language-core': 2.0.29(typescript@5.5.4)
       compare-versions: 6.1.1
