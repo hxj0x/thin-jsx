@@ -32,7 +32,7 @@
     "prepack": "rimraf dist && pnpm typings && pnpm build"
   },
   "dependencies": {
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.24.0",
     "rimraf": "^6.0.1",
     "rollup": "^4.20.0",
     "rollup-plugin-esbuild": "^6.1.1"
