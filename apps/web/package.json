@@ -27,7 +27,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.6.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
     "postcss-import": "^16.1.0",
